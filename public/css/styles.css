@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+
+*, *:after, *:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-brand{
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+}
+
+fieldset, input, textarea, button {
+    border-width: 0;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    box-shadow: none;
+}
+
+input::placeholder, textarea::placeholder {
+    opacity: 1;
+}
+
+/* Block */
+.form {
+    width: 100vw;
+    padding: 10vh 10vw;
+}
+
+.form__informations {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Element */
+form * {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.form__item {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    border-bottom: solid 1px grey;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.form__instruction {
+    width: 250px;
+}
+
+.form__to-fill {
+    width: calc(100% - 250px);
+    color: #383838;
+    padding-left: 50px;
+}
+
+.form__animation {
+    background-color: black;
+    width: calc(100% - 250px);
+    position: absolute;
+    bottom: -100%;
+    left: 280px;
+    height: 100%;
+
+    transition: all 0.25s ease-out;
+    z-index: -1;
+}
+
+.form__checkboxe {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__checkboxe span {
+    margin-left: -20px;
+    padding-left: 30px;
+}
+
+.form__checkboxe span:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: solid 1px black;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.form__checkboxe input {
+    opacity: 0;
+}
+
+.form__submit {
+    display: block;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+.form__submit:before, .form__checkboxe span::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: auto;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: black;
+    transition: width 0.25s ease-out;
+}
+
+/* Modifier */
+.form__item--top {
+    align-items: flex-start;
+}
+
+.form__to-fill--textarea {
+    height: 100px;
+}
+
+.form__to-fill:focus + span {
+    bottom: 0;
+}
+
+.form__to-fill:focus {
+    color: lightgray;
+}
+
+.form__checkboxe input:focus + span:before, .form__checkboxe input:hover + span:before  {
+    left: 0;
+    width: 100%;
+}
+
+.form__checkboxe input:checked + span:after {
+    background-color: black;
+}
+
+.form__submit:hover:before, .form__submit:focus:before {
+    left: 0;
+    width: 100%;
+}
+
+.form__item--error {
+    border-color: tomato;
+}
+
+.form__item--error .form__animation {
+    background-color: tomato;
+    bottom: 0;
+}
+
+.form__item--error .form__to-fill {
+    color: white;
+}
+
+.form__checkboxe--error {
+    color: tomato;
+}
+
+.form__checkboxe--error span:after {
+    border-color: tomato;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    /* Block */
+    .form__instruction {
+        width: 170px;
+    }
+
+    /* Element */
+    .form__to-fill {
+        width: calc(100% - 170px);
+        padding-left: 0;
+    }
+
+    .form__animation {
+        width: calc(100% - 170px);
+        left: 170px;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    /* Block */
+    .form {
+        position: relative;
+        transform: none;
+        padding: 0 20px;
+    }
+
+    .form__informations {
+        margin-bottom: 0;
+    }
+
+    .form__bottom {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Elements */
+    .form__item {
+        display: block;
+        margin-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .form__instruction {
+        width: 100%;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .form__to-fill {
+        width: 100%;
+        padding-left: 0;
+        display: block;
+    }
+
+    .form__to-fill--textarea {
+        height: auto;
+    }
+
+    .form__animation {
+        left: 0;
+        height: 5px;
+        width: 100%;
+    }
+}
+
+
+.footer{
+  background-color: #000;
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+.footer p{
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 0;
+}

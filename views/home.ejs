@@ -1,0 +1,115 @@
+<%- include('partials/header') %>
+
+
+
+<form id="form" class="form" method="POST" action = "/register">
+
+  <fieldset class="form__informations">
+
+      <label for="name" class="form__item">
+          <span class="form__instruction">Name &amp; surname</span>
+          <input class="form__to-fill"
+                 type="text" name="name" id="name"
+                 placeholder="who are you ?"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="email" class="form__item">
+          <span class="form__instruction">Your email</span>
+          <input class="form__to-fill"
+                 type="email" name="email" id="email"
+                 placeholder="not a fake email"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="regNo" class="form__item">
+          <span class="form__instruction">Registration number</span>
+          <input class="form__to-fill"
+                 type="text" name="reg" id="name"
+                 placeholder="you must remeber it!"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="course" class="form__item">
+          <span class="form__instruction">Course</span>
+          <input class="form__to-fill"
+                 type="text" name="course" id="name"
+                 placeholder="in which you are enrolled"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="number" class="form__item">
+          <span class="form__instruction">Contact number</span>
+          <input class="form__to-fill"
+                 type="text" name="number" id="name"
+                 placeholder="your number"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="year" class="form__item">
+          <span class="form__instruction">Year of graduation</span>
+          <input class="form__to-fill"
+                 type="number" min = "1" max="5"
+                 name="year" id="name"
+                 placeholder="what year are you in at university?"
+                 autocomplete="off">
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="department" class="form__item">
+        <span class="form__instruction">Department</span>
+        <select name="department" class="form__to-fill">
+          <option value="Public Speaking">Public Speaking</option>
+          <option value="Technical">Technical</option>
+          <option value="Marketing">Marketing</option>
+          <option value="Graphic Designing">Graphic Designing</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Event Planning">Event Planning</option>
+        </select>
+        <span class="form__animation"></span>
+      </label>
+
+
+      <label for="text-box1" class="form__item form__item--top">
+          <span class="form__instruction">Why you should be selected for that department? </span>
+          <textarea class="form__to-fill form__to-fill--textarea"
+                    name="text1" id="message"
+                    placeholder="specify skills and past experience"></textarea>
+          <span class="form__animation"></span>
+      </label>
+
+      <label for="text-box2" class="form__item form__item--top">
+          <span class="form__instruction">Why do you want to join Coding Ninjas LPU? </span>
+          <textarea class="form__to-fill form__to-fill--textarea"
+                    name="text2" id="message"
+                    placeholder="answer ?"></textarea>
+          <span class="form__animation"></span>
+      </label>
+
+  </fieldset>
+
+  <fieldset class="form__bottom">
+
+      <!-- <label for="privacy" class="form__checkboxe">
+          <input type="checkbox" id="privacy">
+          <span>Accept privacy</span>
+      </label> -->
+
+      <!-- <button class="form__submit" type="submit">Submit</button> -->
+      <button class="form__submit">Submit</button>
+
+  </fieldset>
+
+</form>
+
+
+
+
+
+
+<%- include('partials/footer') %>
