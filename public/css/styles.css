@@ -174,7 +174,7 @@ form * {
 }
 
 .form__item--error .form__to-fill {
-    color: white;
+    color: black;
 }
 
 .form__checkboxe--error {
