@@ -1,7 +1,6 @@
 <%- include('partials/header') %>
 
 
-
 <form id="form" class="form" method="POST" action = "/register">
 
   <fieldset class="form__informations">
@@ -27,7 +26,7 @@
       <label for="regNo" class="form__item">
           <span class="form__instruction">Registration number</span>
           <input class="form__to-fill"
-                 type="text" name="reg" id="reqNo"
+                 type="text" name="reg" id="regNo"
                  placeholder="you must remember it!"
                  autocomplete="off">
           <span class="form__animation"></span>
@@ -94,15 +93,12 @@
   </fieldset>
 
   <fieldset class="form__bottom">
+      <button class="form__submit" type="reset">Reset</button>
       <!-- <button class="form__submit" type="submit">Submit</button> -->
       <button class="form__submit">Submit</button>
   </fieldset>
 
 </form>
-
-
-
-
 
 
 <%- include('partials/footer') %>
