@@ -14,7 +14,7 @@ document.getElementById("form").addEventListener("submit", (e) => {
 
     Swal.fire(
       'Registered Successfully!',
-      'You will be redirected to the form again in 5 seconds!',
+      'You will be redirected to the form again!',
       'success'
     )
 

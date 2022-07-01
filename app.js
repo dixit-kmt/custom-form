@@ -26,8 +26,6 @@ const regSchema = new mongoose.Schema({
 //Create model
 const Reg = mongoose.model("Reg", regSchema);
 
-
-
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
@@ -36,7 +34,7 @@ app.get("/", function(req, res){
   res.render("home")
 })
 
-app.post("/register", function(req, res){
+app.post("/", function(req, res){
   const userReg = new Reg({
     name:           req.body.name,
     email:          req.body.email,
@@ -47,18 +45,16 @@ app.post("/register", function(req, res){
     department:     req.body.department,
     whyForDept:     req.body.text1,
     whyForOrg:      req.body.text2
-});
-userReg.save(function(err){
-  if(err){
+  });
+  userReg.save(function(err){
     console.log(err);
     res.redirect("/")
-  } else{
-    res.redirect("/");
-  }
-});
-
+  });
 })
 
+app.use((req, res, next) => {
+  res.render("failure")
+})
 
 let port = process.env.PORT;
 if (port == null || port == "") {

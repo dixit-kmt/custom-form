@@ -12,6 +12,12 @@
   font-size: 2rem;
 }
 
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
 fieldset, input, textarea, button {
     border-width: 0;
     outline: none;
