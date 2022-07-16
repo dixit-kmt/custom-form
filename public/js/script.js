@@ -18,6 +18,16 @@ document.getElementById("form").addEventListener("submit", (e) => {
       'success'
     )
 
+    const serviceID = 'default_service';
+    const templateID = 'template_ktnr8jh';
+
+    emailjs.sendForm(serviceID, templateID, form)
+      .then(() => {
+        console.log('Sent!');
+    }, (err) => {
+        console.log(JSON.stringify(err));
+    });
+
     setTimeout(function() {
       document.getElementById("form").submit();
     }, 5000);
