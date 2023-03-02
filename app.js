@@ -6,9 +6,10 @@ var swal = require('sweetalert')
 
 const app = express();
 
-//DB connection
+// DB connection
 // mongoose.connect("mongodb://localhost:27017/cnlpuDB");
-mongoose.connect("mongodb+srv://dixit-kmt:testing09@cluster0.anj4p.mongodb.net/cnlpuDB?retryWrites=true&w=majority");
+// testing09
+mongoose.connect("mongodb+srv://dixit-kmt:<pwd>@cluster0.anj4p.mongodb.net/cnlpuDB?retryWrites=true&w=majority");
 
 //Create Schema
 const regSchema = new mongoose.Schema({
